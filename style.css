@@ -1,0 +1,469 @@
+/* INITIALIZE FONTS */
+	@font-face {
+		font-family: "Monsterrat";
+		src: url("fonts/Montserrat-Regular.ttf");
+		font-weight: normal;
+	}
+	@font-face {
+		font-family: "Monsterrat";
+		src: url("fonts/Montserrat-Bold.ttf");
+		font-weight: bold;
+	}
+	@font-face {
+		font-family: "Merriweather-Light";
+		src: url("fonts/Merriweather-Light.ttf");
+	}
+	@font-face {
+		font-family: "Merriweather-Light";
+		src: url("fonts/Merriweather-LightItalic.ttf");
+		font-style: italic;
+	}
+	
+	
+	* {
+		text-align: center;
+		font-family: "Monsterrat";
+	}
+	
+	body { margin: 0; padding: 0; font-size: 16px; font-family: "Merriweather-Light"; }
+	
+	img { vertical-align: middle; }
+	
+	h1 {
+		padding: 4ex 0 2ex;
+		font-size: 2.5em;
+	}
+	
+	h1, h2, h3, h4, .yellowbutton {
+		font-family: "Monsterrat";
+		text-transform: uppercase;
+	}
+	
+	p {
+		font-family: "Merriweather-Light";
+	}
+	.quoteparagraph {
+		font-style: italic;
+	}
+	
+	input, textarea {
+		text-align: left;
+		font-size: inherit;
+		margin: 1ex;
+		box-sizing: border-box;
+		border: #ddd solid 2px;
+		
+		background-color: #eeeeee; /* Old browsers */
+		background-color: -moz-linear-gradient(top, #ddd 0%, #fff 100%); /* FF3.6-15 */
+		background-color: -webkit-linear-gradient(top, #ddd 0%,#fff 100%); /* Chrome10-25,Safari5.1-6 */
+		background-color: linear-gradient(to bottom, #ddd 0%,#fff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ddd', endColorstr='#fff',GradientType=0 ); /* IE6-9 */
+	}
+	input {
+		height: 5ex;
+		padding: 0 1.5ex;
+	}
+	
+	button, .thumbnail {
+		cursor: pointer;
+	}
+	
+	input:hover, textarea:hover, a.yellowbutton:hover, form button:hover/*, .thumbnail:hover, .teammember:hover*/ {
+		box-shadow: 0 0 1ex rgba(255, 255, 255, 0.5);
+	}
+	
+	#navbar a:hover {
+		text-shadow: 0 0 1ex rgba(255, 255, 255, 0.5);
+	}
+	
+	#navbar {
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		transition: background 1s;
+	}
+	#navbar.background {
+		background-color: #444;
+	}
+	#menutoggle {
+		display: none;
+	}
+	#homebutton {
+		float: left;
+	}
+	#extranav {
+		float: right;
+		line-height: 41px;
+	}
+	#navbar a {
+		display: inline-block;
+		
+		font-family: "Monsterrat";
+		font-weight: bold;
+		color: #fff;
+		text-decoration: none;
+		
+		padding: 2ex;
+	}
+	
+	#welcome {
+		background-color: #222;
+		background-image: url("backgrounds/welcome_bg.png");
+		background-size: cover;
+		color: white;
+		
+		padding: 10ex 0;
+	}
+	#about, #team, #impressions, #contact {
+		padding: 7.5ex 0 5ex;
+	}
+	#about {
+		background-color: #ddd;
+	}
+	#team {
+		background-color: #22222b;
+		background-image: url("backgrounds/team_bg.png");
+		background-position: center;
+		background-size: cover;
+		color: #fff;
+	}
+	
+	.validationfeedback {
+		margin: 0;
+		font-size: 80%;
+		color: #ef5350;
+	}
+	.valid, .invalid {
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+	.valid:not(:focus) {
+		color: #81c784;
+		background-image: url("icons/green_ok.png");
+	}
+	.invalid:not(:focus) {
+		border-style: solid;
+		border-color: #ef5350;
+		color: #ef5350;
+		background-image: url("icons/red_x.png");
+	}
+	
+	.highlighted {
+		color: #ff0 !important;
+	}
+	
+	.container {
+		display: table;
+		table-layout: fixed;
+		margin: auto;
+		margin-top: 5ex;
+		width: 75%;
+		border-spacing: 3ex;
+	}
+	
+	.container>div {	
+		display: table-cell;
+		position: relative;
+		
+		background-color: #fff;
+		box-shadow: 0 0 2ex #ccc;
+		
+		padding: 6ex 3ex;
+	}
+	
+	.yellowbutton {
+		display: inline-block;
+		
+		background-color: #ffdc00;
+	
+		font-size: 100%;
+		line-height: normal;
+		
+		box-sizing: content-box;
+		width: 24ex;
+		padding: 2ex;
+		margin: 4ex 0;
+		border: none;
+		
+		font-family: "Monsterrat";
+		font-weight: bold;
+		color: black;
+		text-decoration: none;
+	}
+	
+	
+/* ABOUT */
+	.cowboy, .tools, .space {
+		height: 80px;
+		width: 80px;
+		position: absolute;
+		top: -40px;
+		left: 50%;
+		margin-left: -40px;
+	}
+	
+	.cowboy {
+		background-image: url("icons/cowboy.png");
+	}
+	.tools {
+		background-image: url("icons/tools.png");
+	}
+	.space {
+		background-image: url("icons/space.png");
+	}
+	
+	.smoothcorners {
+		border-radius: 4px;
+		overflow: hidden;
+	}
+	.smoothcorners.overflow {
+		/* This is so yellow icons are still visible; overflow: hidden; is only needed for places with gradient backgrounds for MS
+		This should probably go somewhere else. It's ugly here, somehow chaotic.*/
+		overflow: visible;
+	}
+	button.smoothcorners {
+		border: none;
+		padding: 0;
+		margin: 4ex 0;
+		font-size: inherit;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	button .yellowbutton {
+		margin: 0;
+	}
+	
+	
+/* TEAM */
+	.flipcontainer {
+		display: inline-block;
+		width: 350px;
+		height: 200px !important; /* Needed because .slick-slide wants to override with 100% */
+		margin: 1ex;
+		
+		position: relative;
+		perspective: 1600px;
+	}
+	
+	.teammember {
+		width: 350px;
+		height: 200px;
+		position: absolute;
+		transform-style: preserve-3d;
+		transition: transform 1s;
+		
+		cursor: pointer;
+	}
+	.teammember div {
+		backface-visibility: hidden;
+	}
+	.front, .back{
+		margin: 0;
+		display: block;
+		position: absolute;
+		width: 350px;
+		height: 200px;
+		backface-visibility: hidden;
+	}
+	.front {
+		background: -moz-linear-gradient(left, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgba(255,255,255,0) 50%,rgba(255,255,255,0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+	}
+	.back {
+		transform: rotateY( 180deg );
+	}
+	.flipped {
+		transform: rotateY( 180deg );
+	}
+	.quotecontainer {
+		display: table-cell;
+		vertical-align: middle;
+		width: 350px;
+		height: 200px;
+		
+		background: -moz-linear-gradient(45deg, #1f262e 0%, #0e0e0e 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(45deg, #1f262e 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(45deg, #1f262e 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f262e', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+	.shortbio {
+		width: 150px;
+		text-align: left;
+		float: left;
+	}
+	.shortbio p {
+		text-align: left;
+		margin: 2ex;
+	}
+	
+	.portrait {
+		float: left;
+		height: 200px;
+		width: 200px;
+		background-color: green;
+		overflow: hidden;
+	}
+	.portrait img {
+		/* Cut image */
+		margin-left: -50px;
+		margin-top: -18px;
+	}
+	
+	
+/* GALLERY */
+	#impressions {
+		background-color: #161b1f;
+		color: #fff;
+		position: relative;
+	}
+	.gallery {
+		margin: 5ex 0;
+	}
+	.galleryoverlay {
+		display: none;
+	}
+	.galleryoverlay.expanded {
+		display: block;
+		position: absolute;
+		background-color: rgba(22, 27, 31, 0.9);
+		width: 100%;
+		top: 0;
+		bottom: 0;
+	}
+	.previousimage, .nextimage, .hidedoverlay {
+		background: none;
+		border: none;
+		color: #acb1b6;
+	}
+	.previousimage {
+		position: absolute;
+		height: 24ex;
+		width: 24ex;
+		margin-top: -12ex;
+		left:0;
+		top: 50%;
+	}
+	.nextimage {	
+		position: absolute;
+		height: 24ex;
+		width: 24ex;
+		margin-top: -12ex;
+		right: 0;
+		top: 50%;
+	}
+	.hidedoverlay {
+		height: 16ex;
+		width: 16ex;
+	}
+	.display {
+		max-height: 65%;
+		max-width: 100%;
+	}
+	.thumbnail {
+		display: inline-block;
+		background-color: #000;
+		max-width: 13%;
+		margin: 1.5ex 1%;
+	}
+	.thumbnail img {
+		width: 100%;
+	}
+	
+	
+/* CONTACT */
+	#contact {
+		background-color: #acb1b5;
+	}
+	
+	.contactinfo, .message {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.message {
+		height: 19ex;
+		padding: 1ex;
+	}
+	
+	
+/* FOOTER */
+	#footer {
+		background-color: #161b1f;
+		color: #484d52;
+		padding: 3ex;
+	}
+	
+	
+	
+/* Smaller screens */
+	@media (max-width: 1024px) {
+		.container > div {
+			display: block;
+			margin: 7.5ex 0;
+		}
+		
+		.thumbnail {
+			max-width: 20%;
+		}
+	}
+	
+	
+	
+/* Mobile version */
+	@media (max-width: 800px) {
+		body { font-size: 14px; }
+	
+		#menubuttoncontainer {
+			float: right;
+			line-height: 41px;
+			margin: 3ex 4ex;
+		}
+		#menutoggle {
+			display: inline-block;
+			height: 41px;
+			background: transparent;
+			color: #fff;
+			border-style: solid;
+			border-color: #fff;
+			border-width: 1px;
+			border-radius: 4px;
+		}
+		#navbar {
+			position: absolute;
+		}
+		#navbar.background {
+			background-color: transparent;
+		}
+		#navbar.expanded {
+			height: 100%;
+			background-color: rgba(22, 27, 31, 0.99) !important;
+		}
+		#navbar.expanded #extranav {
+			clear: both;
+			display: block;
+			float: none;
+			padding-top: 5ex;
+		}
+		#extranav {
+			display: none;
+		}
+		#extranav a {
+			font-size: 150%;
+			display: block;
+			float: none;
+			padding: 2ex;
+			color: #fff !important; /* No anchor highlichting for mobile nav menu */
+		}
+		#welcome {
+			position: relative;
+			background-image: url("backgrounds/welcome_bg_mobile.png")
+		}
+		
+		.thumbnail {
+			max-width: 25%;
+		}
+	}
+	
