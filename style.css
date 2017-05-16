@@ -252,11 +252,11 @@
 		cursor: pointer;
 	}
 	.teammember * {
-		backface-visibility: hidden;
+		        backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-o-backface-visibility: hidden;
+		    -ms-backface-visibility: hidden;
+		   -moz-backface-visibility: hidden;
+		     -o-backface-visibility: hidden;
 	}
 	.front, .back{
 		margin: 0;
@@ -266,7 +266,11 @@
 		height: 200px;
 	}
 	.front {
-		transform: rotateY(0deg);
+		        transform: rotateY( 0deg );
+		-webkit-transform: rotateY( 0deg );
+		    -ms-transform: rotateY( 0deg );
+		   -moz-transform: rotateY( 0deg );
+		     -o-transform: rotateY( 0deg );
 		
 		background: -moz-linear-gradient(left, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -274,10 +278,18 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 	}
 	.back {
-		transform: rotateY( 180deg );
+		        transform: rotateY( 180deg );
+		-webkit-transform: rotateY( 180deg );
+		    -ms-transform: rotateY( 180deg );
+		   -moz-transform: rotateY( 180deg );
+		     -o-transform: rotateY( 180deg );
 	}
 	.flipped {
-		transform: rotateY( 180deg );
+		        transform: rotateY( 180deg );
+		-webkit-transform: rotateY( 180deg );
+		    -ms-transform: rotateY( 180deg );
+		   -moz-transform: rotateY( 180deg );
+		     -o-transform: rotateY( 180deg );
 	}
 	/* teammember bio (frontside) */
 	.shortbio {
