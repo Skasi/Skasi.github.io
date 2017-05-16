@@ -251,7 +251,7 @@
 		
 		cursor: pointer;
 	}
-	.teammember div {
+	.teammember * {
 		backface-visibility: hidden;
 	}
 	.front, .back{
