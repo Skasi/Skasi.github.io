@@ -253,6 +253,7 @@
 	}
 	.teammember * {
 		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 	}
 	.front, .back{
 		margin: 0;
@@ -260,7 +261,6 @@
 		position: absolute;
 		width: 350px;
 		height: 200px;
-		backface-visibility: hidden;
 	}
 	.front {
 		background: -moz-linear-gradient(left, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%); /* FF3.6-15 */
