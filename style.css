@@ -42,9 +42,6 @@
 	p {
 		font-family: "Merriweather-Light";
 	}
-	.quoteparagraph {
-		font-style: italic;
-	}
 	
 	input, textarea {
 		text-align: left;
@@ -81,7 +78,6 @@
 		top: 0;
 		z-index: 1;
 		width: 100%;
-		transition: background 1s;
 	}
 	#navbar.background {
 		background-color: #444;
@@ -278,17 +274,7 @@
 	.flipped {
 		transform: rotateY( 180deg );
 	}
-	.quotecontainer {
-		display: table-cell;
-		vertical-align: middle;
-		width: 350px;
-		height: 200px;
-		
-		background: -moz-linear-gradient(45deg, #1f262e 0%, #0e0e0e 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(45deg, #1f262e 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(45deg, #1f262e 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f262e', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	}
+	/* teammember bio (frontside) */
 	.shortbio {
 		width: 150px;
 		text-align: left;
@@ -297,8 +283,11 @@
 	.shortbio p {
 		text-align: left;
 		margin: 2ex;
+		font-family: "Monsterrat";
 	}
-	
+	.biooccupation, .bioexperience {
+		font-size: 80%;
+	}
 	.portrait {
 		float: left;
 		height: 200px;
@@ -310,6 +299,27 @@
 		/* Cut image */
 		margin-left: -50px;
 		margin-top: -18px;
+	}
+	/* teammember quote (backside) */
+	.quotecontainer {
+		display: table-cell;
+		vertical-align: middle;
+		width: 350px;
+		height: 200px;
+		
+		background: -moz-linear-gradient(45deg, #1f262e 0%, #0e0e0e 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(45deg, #1f262e 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(45deg, #1f262e 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f262e', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+	.quotetitle {
+		color: #555;
+		font-size: 80%;
+		font-family: "Monsterrat";
+	}
+	.quoteparagraph {
+		font-size: 125%;
+		font-style: italic;
 	}
 	
 	
@@ -397,6 +407,13 @@
 	}
 	
 	
+/* Non-mobile version */
+	@media (min-width: 801px) {
+		#navbar {
+			transition: background 1s; /* No background transition for expandable nav menu */
+		}
+	}
+	
 	
 /* Smaller screens */
 	@media (max-width: 1024px) {
@@ -409,7 +426,6 @@
 			max-width: 20%;
 		}
 	}
-	
 	
 	
 /* Mobile version */
@@ -445,16 +461,16 @@
 			clear: both;
 			display: block;
 			float: none;
-			padding-top: 5ex;
+			padding-top: 4ex;
 		}
 		#extranav {
 			display: none;
 		}
 		#extranav a {
-			font-size: 150%;
+			font-size: 125%;
 			display: block;
 			float: none;
-			padding: 2ex;
+			padding: 1.5ex;
 			color: #fff !important; /* No anchor highlichting for mobile nav menu */
 		}
 		#welcome {

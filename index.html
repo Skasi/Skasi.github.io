@@ -245,8 +245,8 @@
 
 
 	<script src="jquery-3.2.1.min.js"></script>
-	<script src="placeholders.min.js"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="placeholders.jquery.min.js"></script>
+	<script src="slick/slick.min.js"></script>
 
 	<script>
 		$().ready(function() {
@@ -281,11 +281,22 @@
 			// get that elements' top/bottom coordinates
 			// then whenever scrolling, check if the browser's top is between one such elements' top and bottom; do that in another for loop, but if one is found, then break
 			var currentPair
-			// TODO: consider also running this on resize, since content can move around
 			function navbarHighlighter() {
-				// (documentElement || body) for cross-browser-support
-				var top = (document.documentElement.scrollTop || document.body.scrollTop) + navbar.offsetHeight
+				// Edge case for last pair (bottom most element can often be smaller than window height)
+				if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+					if (currentPair)
+						currentPair.anchor.className = currentPair.anchor.className.replace(" highlighted", "")
+						
+					highlightPairs[highlightPairs.length-1].anchor.className += " highlighted"
+					currentPair = highlightPairs[highlightPairs.length-1]
+					
+					return
+				}
 				
+				// (documentElement || body) for cross-browser-support
+				var top = $(window).scrollTop() + navbar.offsetHeight
+				
+				// Check if current navlink still highlighted
 				if (currentPair && currentPair.target.offsetTop <= top && currentPair.target.offsetTop + currentPair.target.offsetHeight > top) {
 					// current navlink still highlighted
 					return
@@ -294,7 +305,8 @@
 					currentPair.anchor.className = currentPair.anchor.className.replace(" highlighted", "")
 					currentPair = null
 				}
-					
+				
+				// Highlight new navlink
 				for (var i = 0; i < highlightPairs.length; i++) {
 					var anchor = highlightPairs[i].anchor
 					var target = highlightPairs[i].target
@@ -308,6 +320,7 @@
 				}
 			}
 			$(window).scroll(navbarHighlighter)
+			$(window).resize(navbarHighlighter) // resizing can move around content, thus recalculation happens
 			navbarHighlighter()
 			
 			
@@ -319,7 +332,6 @@
 			
 			
 			// TOGGLE QUOTES FOR TEAMMEMBERS
-			// TODO: add flip-card-animation
 			var teammembers = document.getElementsByClassName("teammember")
 			for (var i = 0; i < teammembers.length; i++) {
 				teammembers[i].onclick = function() {
@@ -347,7 +359,7 @@
 							centerMode: true,
 							initialSlide: 2,
 						}
-					);
+					)
 				} else if ($windowWidth > maxWidthForSlider && sliderEnabled) {
 					sliderEnabled = false
 					$('.memberlist').slick("unslick")
@@ -449,35 +461,26 @@
 <!--
 
 Open questions:
-"Six fine fellows", but only five pictures?
+"Six fine fellows", but only five team members?
+
 Should multiple quotes be visible at the same time or is only one quote meant to be revealed at any given moment?
-Should quotes really only be revealed via clicks on portraits?
 
-Should gallery work on mobile? If yes/no, how should it look like?
-TODO: I'll just move arrows to the left/right side of the X button.
+Should "swipe" for slideshow be true or false? (considering leftclick is used to flip cards)
 
-Should "swipe" for slideshow be true or false?
+Should gallery work on mobile? If yes/no, how should it look like? Should it be swipe-able?
 
 How should teammember divs behave when only 4 would fit into the first row? Should it be 4, then 1, or still 3, then 2? And what if all 5 fit into one row?
 
 Should navmenu on mobile really not be fixed?
 
-Should I increase the contrast/readability of (in)valid text in input fields?
-
-How should gallery behave on various sizes?
-Should it be swipe-able?
-
-
-TODO:
-Font
 
 Optional:
-Add quotes
-Flip animation
-Replace carousel/gallery icons
-Add box shadow or outline to focused input field
+Preload gallery images
+Max width for teammembers: 3 & 2 portraits instead of 4 & 1
+Replace carousel icons
 Clean up/improve JS
 Clean up/improve CSS
-Max width for teammembers, for 3 & 2 portraits instead of 4 & 1
+Add new quotes
+More advanced algorithm to determine which nav link to highlight
 
 -->
