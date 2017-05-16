@@ -252,8 +252,11 @@
 		cursor: pointer;
 	}
 	.teammember * {
-		backface-visibility: hidden;
-		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden !important;
+		-webkit-backface-visibility: hidden !important;
+		-ms-backface-visibility: hidden !important;
+		-moz-backface-visibility: hidden !important;
+		-o-backface-visibility: hidden !important;
 	}
 	.front, .back{
 		margin: 0;
