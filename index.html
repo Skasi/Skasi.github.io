@@ -1,467 +1,472 @@
 <!DOCTYPE html>
 
 <html lang="en">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>SPACECOWBOY</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta name="description" content="An independent space agency">
+		
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="slick/slick.css"/>
+		<link rel="stylesheet" href="slick/slick-theme.css"/>
+		
+		<title>SPACECOWBOY</title>
+	</head>
 	
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="slick/slick.css"/>
-	<link rel="stylesheet" href="slick/slick-theme.css"/>
-	
-	<div id="content">
-		<div id="welcome">
-			<div id="navbar">
-				<div id="homebutton">
-					<a href="#welcome"><img src="icons/logo.png" alt="Spacecowboy logo"></a>
+	<body>
+		<div id="content">
+			<div id="welcome">
+				<div id="navbar">
+					<div id="homebutton">
+						<a href="#welcome"><img src="icons/logo.png" alt="Spacecowboy logo"></a>
+					</div>
+					
+					<div id="menubuttoncontainer">
+						<button id="menutoggle">MENU</button>
+					</div>
+
+					<div id="extranav">
+						<a href="#about">ABOUT US</a>
+						<a href="#team">THE TEAM</a>
+						<a href="#impressions">IMPRESSIONS</a>
+						<a href="#contact">CONTACT</a>
+					</div>
 				</div>
 				
-				<div id="menubuttoncontainer">
-					<button id="menutoggle">MENU</button>
-				</div>
+				<h1>Hey there, we are<br>Spacecowboy<br>
+				<small>- An independent space agency -</small></h1>
+			
+				<a href="#about" class="yellowbutton smoothcorners">Learn more</a>
+			</div>
 
-				<div id="extranav">
-					<a href="#about">ABOUT US</a>
-					<a href="#team">THE TEAM</a>
-					<a href="#impressions">IMPRESSIONS</a>
-					<a href="#contact">CONTACT</a>
+			<div id="about">
+				<h2>A few facts about us</h2>
+				<p>Before you do business with us,<br>
+				you might want to know a little bit more about our company:</p>
+				
+				<div class="container">
+					<div class="smoothcorners overflow">
+						<div class="iconcontainer cowboy"></div>
+						<h3>We are cowboys</h3>
+						<p>
+							You might have guessed that from our company name, but the fact is:<br>
+							Yes we are indeed cowboys. Cowboys who'd like to go to space.<br>
+							Deal with it.
+						</p>
+					</div>
+					<div class="smoothcorners overflow">
+						<div class="iconcontainer tools"></div>
+						<h3>We like to tinker</h3>
+						<p>
+							There are a lot of things lying around on a typical Cowboy Ranch. So we started putting them together, and got really good at rocket building.
+						</p>
+					</div>
+					<div class="smoothcorners overflow">
+						<div class="iconcontainer space"></div>
+						<h3>We explore space</h3>
+						<p>
+							Once we got our first proper rocket, everything went quite fast. And now we are the #1 independent space agency in the world.<br>
+							Who would have guessed?
+						</p>
+					</div>
 				</div>
 			</div>
-			
-			<h1>Hey there, we are<br>Spacecowboy<br>
-			<small>- An independent space agency -</small></h1>
-		
-			<a href="#about" class="yellowbutton smoothcorners">Learn more</a>
-		</div>
 
-		<div id="about">
-			<h2>A few facts about us</h2>
-			<p>Before you do business with us,<br>
-			you might want to know a little bit more about our company:</p>
-			
-			<div class="container">
-				<div class="smoothcorners overflow">
-					<div class="iconcontainer cowboy"></div>
-					<h3>We are cowboys</h3>
-					<p>
-						You might have guessed that from our company name, but the fact is:<br>
-						Yes we are indeed cowboys. Cowboys who'd like to go to space.<br>
-						Deal with it.
-					</p>
-				</div>
-				<div class="smoothcorners overflow">
-					<div class="iconcontainer tools"></div>
-					<h3>We like to tinker</h3>
-					<p>
-						There are a lot of things lying around on a typical Cowboy Ranch. So we started putting them together, and got really good at rocket building.
-					</p>
-				</div>
-				<div class="smoothcorners overflow">
-					<div class="iconcontainer space"></div>
-					<h3>We explore space</h3>
-					<p>
-						Once we got our first proper rocket, everything went quite fast. And now we are the #1 independent space agency in the world.<br>
-						Who would have guessed?
-					</p>
+			<div id="team">
+				<h2>The team</h2>
+				<p>Yep, that's us. Six fine fellows, eager to get on the next adventure.<br>
+				Click on the pictures to get some more information!</p>
+				
+				<div class="memberlist">
+					<div class="flipcontainer">
+						<div class="teammember">
+							<div class="front smoothcorners">
+								<div class="portrait"><img src="astronauts/astronaut1.png" alt="Portrait"></div>
+								
+								<div class="shortbio">
+									<p class="bioname">DICK<br>HARVEY</p>
+									
+									<p class="biooccupation">CAPTAIN</p>
+								
+									<p class="bioexperience">AGE: 56<br>
+									MISSIONS: 13</p>
+								</div>
+							</div>
+							<div class="back smoothcorners">
+								<div class="quotecontainer">
+									<div class="quote">
+										<p class="quotetitle">DICK'S FAMOUS QUOTE:</p>
+										<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flipcontainer">
+						<div class="teammember">
+							<div class="front smoothcorners">
+								<div class="portrait"><img src="astronauts/astronaut2.png" alt="Portrait"></div>
+								
+								<div class="shortbio">
+									<p class="bioname">RICHIE<br>FARHEM</p>
+									
+									<p class="biooccupation">ENGINEER</p>
+									
+									<p class="bioexperience">AGE: 48<br>
+									MISSIONS: 13</p>
+								</div>
+							</div>
+							<div class="back smoothcorners">
+								<div class="quotecontainer">
+									<div class="quote">
+										<p class="quotetitle">RICHIE'S FAMOUS QUOTE:</p>
+										<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flipcontainer">
+						<div class="teammember">
+							<div class="front smoothcorners">
+								<div class="portrait"><img src="astronauts/astronaut3.png" alt="Portrait"></div>
+								
+								<div class="shortbio">
+									<p class="bioname">JOHN<br>SIRACHA</p>
+									
+									<p class="biooccupation">GUNSLINGER</p>
+									
+									<p class="bioexperience">AGE: 47<br>
+									MISSIONS: 13</p>
+								</div>
+							</div>
+							<div class="back smoothcorners">
+								<div class="quotecontainer">
+									<div class="quote">
+										<p class="quotetitle">JOHN'S FAMOUS QUOTE:</p>
+										<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flipcontainer">
+						<div class="teammember">
+							<div class="front smoothcorners">
+								<div class="portrait"><img src="astronauts/astronaut4.png" alt="Portrait"></div>
+								
+								<div class="shortbio">
+									<p class="bioname">BERT<br>McNAMERA</p>
+									
+									<p class="biooccupation">CAPTAIN</p>
+									
+									<p class="bioexperience">AGE: 71<br>
+									MISSIONS: 13</p>
+								</div>
+							</div>
+							<div class="back smoothcorners">
+								<div class="quotecontainer">
+									<div class="quote">
+										<p class="quotetitle">BERT'S FAMOUS QUOTE:</p>
+										<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flipcontainer">
+						<div class="teammember">
+							<div class="front smoothcorners">
+								<div class="portrait"><img src="astronauts/astronaut5.png" alt="Portrait"></div>
+								
+								<div class="shortbio">
+									<p class="bioname">AL<br>SVERINGE</p>
+									
+									<p class="biooccupation">CEO</p>
+									
+									<p class="bioexperience">AGE: 71<br>
+									MISSIONS: 13</p>
+								</div>
+							</div>
+							<div class="back smoothcorners">
+								<div class="quotecontainer">
+									<div class="quote">
+										<p class="quotetitle">AL'S FAMOUS QUOTE:</p>
+										<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<div id="team">
-			<h2>The team</h2>
-			<p>Yep, that's us. Six fine fellows, eager to get on the next adventure.<br>
-			Click on the pictures to get some more information!</p>
+			<div id="impressions">
+				<h2>Look at all those stars!</h2>
+				
+				<p>Some impressions from our trips to frickin outer space, enjoy!</p>
 			
-			<div class="memberlist">
-				<div class="flipcontainer">
-					<div class="teammember">
-						<div class="front smoothcorners">
-							<div class="portrait"><img src="astronauts/astronaut1.png" alt="Portrait"></div>
-							
-							<div class="shortbio">
-								<p class="bioname">DICK<br>HARVEY</p>
-								
-								<p class="biooccupation">CAPTAIN</p>
-							
-								<p class="bioexperience">AGE: 56<br>
-								MISSIONS: 13</p>
-							</div>
-						</div>
-						<div class="back smoothcorners">
-							<div class="quotecontainer">
-								<div class="quote">
-									<p class="quotetitle">DICK'S FAMOUS QUOTE:</p>
-									<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="flipcontainer">
-					<div class="teammember">
-						<div class="front smoothcorners">
-							<div class="portrait"><img src="astronauts/astronaut2.png" alt="Portrait"></div>
-							
-							<div class="shortbio">
-								<p class="bioname">RICHIE<br>FARHEM</p>
-								
-								<p class="biooccupation">ENGINEER</p>
-								
-								<p class="bioexperience">AGE: 48<br>
-								MISSIONS: 13</p>
-							</div>
-						</div>
-						<div class="back smoothcorners">
-							<div class="quotecontainer">
-								<div class="quote">
-									<p class="quotetitle">RICHIE'S FAMOUS QUOTE:</p>
-									<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="flipcontainer">
-					<div class="teammember">
-						<div class="front smoothcorners">
-							<div class="portrait"><img src="astronauts/astronaut3.png" alt="Portrait"></div>
-							
-							<div class="shortbio">
-								<p class="bioname">JOHN<br>SIRACHA</p>
-								
-								<p class="biooccupation">GUNSLINGER</p>
-								
-								<p class="bioexperience">AGE: 47<br>
-								MISSIONS: 13</p>
-							</div>
-						</div>
-						<div class="back smoothcorners">
-							<div class="quotecontainer">
-								<div class="quote">
-									<p class="quotetitle">JOHN'S FAMOUS QUOTE:</p>
-									<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="flipcontainer">
-					<div class="teammember">
-						<div class="front smoothcorners">
-							<div class="portrait"><img src="astronauts/astronaut4.png" alt="Portrait"></div>
-							
-							<div class="shortbio">
-								<p class="bioname">BERT<br>McNAMERA</p>
-								
-								<p class="biooccupation">CAPTAIN</p>
-								
-								<p class="bioexperience">AGE: 71<br>
-								MISSIONS: 13</p>
-							</div>
-						</div>
-						<div class="back smoothcorners">
-							<div class="quotecontainer">
-								<div class="quote">
-									<p class="quotetitle">BERT'S FAMOUS QUOTE:</p>
-									<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="flipcontainer">
-					<div class="teammember">
-						<div class="front smoothcorners">
-							<div class="portrait"><img src="astronauts/astronaut5.png" alt="Portrait"></div>
-							
-							<div class="shortbio">
-								<p class="bioname">AL<br>SVERINGE</p>
-								
-								<p class="biooccupation">CEO</p>
-								
-								<p class="bioexperience">AGE: 71<br>
-								MISSIONS: 13</p>
-							</div>
-						</div>
-						<div class="back smoothcorners">
-							<div class="quotecontainer">
-								<div class="quote">
-									<p class="quotetitle">AL'S FAMOUS QUOTE:</p>
-									<p class="quoteparagraph">„This is a small step for me,<br>but a big step for, like,<br>a small kid“</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="impressions">
-			<h2>Look at all those stars!</h2>
-			
-			<p>Some impressions from our trips to frickin outer space, enjoy!</p>
-		
-			<div class="gallery">
-				<div class="thumbnail" data-imagepath="gallery/01.jpg" data-imagetext="Well, this was amazing!"><img src="gallery/thumb01.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/02.jpg" data-imagetext="Well, this was fun!"><img src="gallery/thumb02.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/03.jpg" data-imagetext="Well, this was exciting!"><img src="gallery/thumb03.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/04.jpg" data-imagetext="Well, this was awesome!"><img src="gallery/thumb04.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/05.jpg" data-imagetext="Well, this was beautiful!"><img src="gallery/thumb05.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/06.jpg" data-imagetext="Well, this was breathtaking!"><img src="gallery/thumb06.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/07.jpg" data-imagetext="Well, this was wonderful!"><img src="gallery/thumb07.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/08.jpg" data-imagetext="Well, this was unbelieveable!"><img src="gallery/thumb08.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/09.jpg" data-imagetext="Well, this was neat!"><img src="gallery/thumb09.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/10.jpg" data-imagetext="Well, this was interesting!"><img src="gallery/thumb10.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/11.jpg" data-imagetext="Well, this was remarkable!"><img src="gallery/thumb11.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/12.jpg" data-imagetext="Well, this was great!"><img src="gallery/thumb12.jpg" alt="Gallery thumbnail"></div>
-			</div>
-			
-			<div class="galleryoverlay">
-				<button class="hidedoverlay"><img src="icons/close.png" alt="Close"></button><br>
-				<button class="previousimage"><img src="icons/previous.png" alt=""><br><br><small>PREVIOUS IMAGE</small></button>
-				<img class="display" src="gallery/01.jpg" alt="Closeup">
-				<button class="nextimage"><img src="icons/next.png" alt=""><br><br><small>NEXT IMAGE</small></button>
-				<p class="imagedescription"></p>
-			</div>
-		</div>
-		
-		<div id="contact">
-			<h2>Say hello</h2>
-			<p>Got some questions about us? Wanna do business with us?<br>
-			Or do you just want to send us your latest cat-content - there you go:</p>
-			
-			<form>
-				<div>
-					<div class="contactinfo">
-						<p class="validationfeedback" id="firstnamevalidation"></p>
-						<input class="smoothcorners" id="firstname" placeholder="First Name">
-						<p class="validationfeedback" id="lastnamevalidation"></p>
-						<input class="smoothcorners" id="lastname" placeholder="Last Name">
-						<p class="validationfeedback" id="emailvalidation"></p>
-						<input class="smoothcorners" id="email" placeholder="E-Mail">
-					</div>
-					<textarea class="message smoothcorners" placeholder="Your Message"></textarea>
+				<div class="gallery">
+					<div class="thumbnail" data-imagepath="gallery/01.jpg" data-imagetext="Well, this was amazing!"><img src="gallery/thumb01.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/02.jpg" data-imagetext="Well, this was fun!"><img src="gallery/thumb02.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/03.jpg" data-imagetext="Well, this was exciting!"><img src="gallery/thumb03.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/04.jpg" data-imagetext="Well, this was awesome!"><img src="gallery/thumb04.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/05.jpg" data-imagetext="Well, this was beautiful!"><img src="gallery/thumb05.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/06.jpg" data-imagetext="Well, this was breathtaking!"><img src="gallery/thumb06.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/07.jpg" data-imagetext="Well, this was wonderful!"><img src="gallery/thumb07.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/08.jpg" data-imagetext="Well, this was unbelieveable!"><img src="gallery/thumb08.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/09.jpg" data-imagetext="Well, this was neat!"><img src="gallery/thumb09.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/10.jpg" data-imagetext="Well, this was interesting!"><img src="gallery/thumb10.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/11.jpg" data-imagetext="Well, this was remarkable!"><img src="gallery/thumb11.jpg" alt="Gallery thumbnail"></div><div class="thumbnail" data-imagepath="gallery/12.jpg" data-imagetext="Well, this was great!"><img src="gallery/thumb12.jpg" alt="Gallery thumbnail"></div>
 				</div>
 				
-				<button type="submit" class="smoothcorners"><span class="yellowbutton">Send that mail</span></button>
-			</form>
-		</div>
-		
-		<div id="footer">
-			Copyright © 2015<br>
-			SPACE <img src="icons/logo_grey.png" alt=""> COWBOY
-		</div>
-		
-	</div>
-
-
-	<script src="jquery-3.2.1.min.js"></script>
-	<script src="placeholders.jquery.min.js"></script>
-	<script src="slick/slick.min.js"></script>
-
-	<script>
-		// cross browser compatibility (IE 9, 10)
-		if (navigator.userAgent.indexOf("MSIE 10") != -1 || navigator.userAgent.indexOf("MSIE 9") != -1) {
-			$("html").addClass("ie9or10")
-		}
-		
-		
-		$().ready(function() {
-			var navbar = document.getElementById("navbar")
+				<div class="galleryoverlay">
+					<button class="hidedoverlay"><img src="icons/close.png" alt="Close"></button><br>
+					<button class="previousimage"><img src="icons/previous.png" alt=""><br><br><small>PREVIOUS IMAGE</small></button>
+					<img class="display" src="gallery/01.jpg" alt="Closeup">
+					<button class="nextimage"><img src="icons/next.png" alt=""><br><br><small>NEXT IMAGE</small></button>
+					<p class="imagedescription"></p>
+				</div>
+			</div>
 			
-			// HIDE NAVBAR BACKGROUND WHILE AT THE TOP OF THE WEBSITE
-			var navbg = false
-			function toggleNavbarBackground() {
-				if ((document.documentElement.scrollTop || document.body.scrollTop) === 0 && navbg) {
-					navbg = false
-					navbar.className = navbar.className.replace(" background", "")
-				} else if ((document.documentElement.scrollTop || document.body.scrollTop) > 0 && !navbg) {
-					navbg = true
-					navbar.className += " background"
+			<div id="contact">
+				<h2>Say hello</h2>
+				<p>Got some questions about us? Wanna do business with us?<br>
+				Or do you just want to send us your latest cat-content - there you go:</p>
+				
+				<form>
+					<div>
+						<div class="contactinfo">
+							<p class="validationfeedback" id="firstnamevalidation"></p>
+							<input class="smoothcorners" id="firstname" placeholder="First Name">
+							<p class="validationfeedback" id="lastnamevalidation"></p>
+							<input class="smoothcorners" id="lastname" placeholder="Last Name">
+							<p class="validationfeedback" id="emailvalidation"></p>
+							<input class="smoothcorners" id="email" placeholder="E-Mail">
+						</div>
+						<textarea class="message smoothcorners" placeholder="Your Message"></textarea>
+					</div>
+					
+					<button type="submit" class="smoothcorners"><span class="yellowbutton">Send that mail</span></button>
+				</form>
+			</div>
+			
+			<div id="footer">
+				Copyright © 2015<br>
+				SPACE <img src="icons/logo_grey.png" alt=""> COWBOY
+			</div>
+			
+		</div>
+
+
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="placeholders.jquery.min.js"></script>
+		<script src="slick/slick.min.js"></script>
+
+		<script>
+			// cross browser compatibility (IE 9, 10)
+			if (navigator.userAgent.indexOf("MSIE 10") != -1 || navigator.userAgent.indexOf("MSIE 9") != -1) {
+				$("html").addClass("ie9or10")
+			}
+			
+			
+			$().ready(function() {
+				var navbar = document.getElementById("navbar")
+				
+				// HIDE NAVBAR BACKGROUND WHILE AT THE TOP OF THE WEBSITE
+				var navbg = false
+				function toggleNavbarBackground() {
+					if ((document.documentElement.scrollTop || document.body.scrollTop) === 0 && navbg) {
+						navbg = false
+						navbar.className = navbar.className.replace(" background", "")
+					} else if ((document.documentElement.scrollTop || document.body.scrollTop) > 0 && !navbg) {
+						navbg = true
+						navbar.className += " background"
+					}
 				}
-			}
-			$(window).scroll(toggleNavbarBackground)
-			toggleNavbarBackground()
-			
-			
-			// HIGHLIGHT NAVBAR LINKS WHEN SCROLLING
-			// get all navlinks
-			var navlinks = document.querySelectorAll("#extranav a")
-			var highlightPairs = []
-			// loop through navlinks, for each of them find an element where the id is the same as the navlinks href but without the #
-			for (var i = 0; i < navlinks.length; i++) {
-				// TODO: Sanity test (break if no href or no anchor)
-				var href = navlinks[i].getAttribute("href")
-				var targetElement = document.getElementById(href.slice(href.indexOf("#")+1))
-				highlightPairs.push({ anchor: navlinks[i], target: targetElement })
-			}
-			// get that elements' top/bottom coordinates
-			// then whenever scrolling, check if the browser's top is between one such elements' top and bottom; do that in another for loop, but if one is found, then break
-			var currentPair
-			function navbarHighlighter() {
-				// Edge case for last pair (bottom most element can often be smaller than window height)
-				if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-					if (currentPair)
-						currentPair.anchor.className = currentPair.anchor.className.replace(" highlighted", "")
+				$(window).scroll(toggleNavbarBackground)
+				toggleNavbarBackground()
+				
+				
+				// HIGHLIGHT NAVBAR LINKS WHEN SCROLLING
+				// get all navlinks
+				var navlinks = document.querySelectorAll("#extranav a")
+				var highlightPairs = []
+				// loop through navlinks, for each of them find an element where the id is the same as the navlinks href but without the #
+				for (var i = 0; i < navlinks.length; i++) {
+					var href = navlinks[i].getAttribute("href")
+					var targetElement = document.getElementById(href.slice(href.indexOf("#")+1))
+					highlightPairs.push({ anchor: navlinks[i], target: targetElement })
+				}
+				// get that elements' top/bottom coordinates
+				// then whenever scrolling, check if the browser's top is between one such elements' top and bottom; do that in another for loop, but if one is found, then break
+				var currentPair
+				function navbarHighlighter() {
+					// Edge case for last pair (bottom most element can often be smaller than window height)
+					if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+						if (currentPair)
+							currentPair.anchor.className = currentPair.anchor.className.replace(" highlighted", "")
+							
+						highlightPairs[highlightPairs.length-1].anchor.className += " highlighted"
+						currentPair = highlightPairs[highlightPairs.length-1]
 						
-					highlightPairs[highlightPairs.length-1].anchor.className += " highlighted"
-					currentPair = highlightPairs[highlightPairs.length-1]
-					
-					return
-				}
-				
-				// (documentElement || body) for cross-browser-support
-				var top = $(window).scrollTop() + navbar.offsetHeight
-				
-				// Check if current navlink still highlighted
-				if (currentPair && currentPair.target.offsetTop <= top && currentPair.target.offsetTop + currentPair.target.offsetHeight > top) {
-					// current navlink still highlighted
-					return
-				} else if (currentPair) {
-					// no longer highlighted
-					currentPair.anchor.className = currentPair.anchor.className.replace(" highlighted", "")
-					currentPair = null
-				}
-				
-				// Highlight new navlink
-				for (var i = 0; i < highlightPairs.length; i++) {
-					var anchor = highlightPairs[i].anchor
-					var target = highlightPairs[i].target
-					
-					var targetTop = target.offsetTop
-					var targetBottom = targetTop + target.offsetHeight
-					if (targetTop <= top && targetBottom > top) {
-						anchor.className += " highlighted"
-						currentPair = highlightPairs[i]
+						return
 					}
-				}
-			}
-			$(window).scroll(navbarHighlighter)
-			$(window).resize(navbarHighlighter) // resizing can move around content, thus recalculation happens
-			navbarHighlighter()
-			
-			
-			// NAV MENU FOR MOBILE
-			$("#menutoggle").click(function() {
-				$(this).html($(this).html() == 'MENU' ? 'X CLOSE' : 'MENU')
-				$("#navbar").toggleClass("expanded")
-			})
-			
-			
-			// TOGGLE QUOTES FOR TEAMMEMBERS
-			var teammembers = document.getElementsByClassName("teammember")
-			for (var i = 0; i < teammembers.length; i++) {
-				teammembers[i].onclick = function() {
-					if (this.className.indexOf("flipped") === -1) {
-						this.className += " flipped"
-					} else {
-						this.className = this.className.replace("flipped", "")
+					
+					// (documentElement || body) for cross-browser-support
+					var top = $(window).scrollTop() + navbar.offsetHeight
+					
+					// Check if current navlink still highlighted
+					if (currentPair && currentPair.target.offsetTop <= top && currentPair.target.offsetTop + currentPair.target.offsetHeight > top) {
+						// current navlink still highlighted
+						return
+					} else if (currentPair) {
+						// no longer highlighted
+						currentPair.anchor.className = currentPair.anchor.className.replace(" highlighted", "")
+						currentPair = null
 					}
-				}
-			}
-			
-			
-			// TEAM SLIDER FOR MOBILE
-			var sliderEnabled = false
-			var maxWidthForSlider = 800
-			function toggleSlick(){
-				var $windowWidth = $(window).width()
-				if ($windowWidth <= maxWidthForSlider && !sliderEnabled) {
-					sliderEnabled = true
-					$('.memberlist').slick(
-						{
-							dots: true,
-							variableWidth: true,
-							swipe: false,
-							centerMode: true,
-							initialSlide: 2,
+					
+					// Highlight new navlink
+					for (var i = 0; i < highlightPairs.length; i++) {
+						var anchor = highlightPairs[i].anchor
+						var target = highlightPairs[i].target
+						
+						var targetTop = target.offsetTop
+						var targetBottom = targetTop + target.offsetHeight
+						if (targetTop <= top && targetBottom > top) {
+							anchor.className += " highlighted"
+							currentPair = highlightPairs[i]
 						}
-					)
-				} else if ($windowWidth > maxWidthForSlider && sliderEnabled) {
-					sliderEnabled = false
-					$('.memberlist').slick("unslick")
-				}
-			}
-			$(document).ready(toggleSlick)
-			$(window).resize(toggleSlick)
-			
-			
-			// GALLERY
-			var galleryoverlay = document.getElementsByClassName("galleryoverlay")[0]
-			var display = document.getElementsByClassName("display")[0]
-			var imagedescription = document.getElementsByClassName("imagedescription")[0]
-			var currentimage
-			// closing overlay
-			var hidedoverlay = document.getElementsByClassName("hidedoverlay")[0]
-			hidedoverlay.onclick = function() {
-				galleryoverlay.className = galleryoverlay.className.replace("expanded", "")
-			}
-			// previous image button
-			var previousimage = document.getElementsByClassName("previousimage")[0]
-			previousimage.onclick = function() {
-				currentimage --
-				if (currentimage === -1)
-					currentimage = thumbs.length-1
-				display.src = $(thumbs[currentimage]).data("imagepath")
-				imagedescription.innerHTML = $(thumbs[currentimage]).data("imagetext")
-			}
-			// next image button
-			var nextimage = document.getElementsByClassName("nextimage")[0]
-			nextimage.onclick = function() {
-				currentimage ++
-				if (currentimage === thumbs.length)
-					currentimage = 0
-				display.src = $(thumbs[currentimage]).data("imagepath")
-				imagedescription.innerHTML = $(thumbs[currentimage]).data("imagetext")
-			}
-			// clicking on thumbnails
-			var thumbs = document.getElementsByClassName("thumbnail")
-			for (var i = 0; i < thumbs.length; i++) {
-				thumbs[i].onclick = (function(i) {
-					return function() {
-						currentimage = i
-						display.src = $(this).data("imagepath")
-						imagedescription.innerHTML = $(this).data("imagetext")
-						galleryoverlay.className += " expanded"
 					}
-				})(i)
-			}
-			
-			
-			// VERIFY CONTACT INFO
-			// First name validation
-			$("#firstname").change(function() {
-				if (/^[a-zA-Z-'´ \xc0-\xd6\xd8-\xf6\xf8-\xff]+$/.test($(this).val())) {
-					// valid
-					$("#firstnamevalidation").html("")
-					$(this).removeClass("invalid")
-					$(this).addClass("valid")
-				} else {
-					// invalid
-					$("#firstnamevalidation").html("Sorry, that's no valid first name")
-					$(this).removeClass("valid")
-					$(this).addClass("invalid")
 				}
-			})
-			// Last name validation
-			$("#lastname").change(function() {
-				if (/^[a-zA-Z-'´ \xc0-\xd6\xd8-\xf6\xf8-\xff]+$/.test($(this).val())) {
-					// valid
-					$("#lastnamevalidation").html("")
-					$(this).removeClass("invalid")
-					$(this).addClass("valid")
-				} else {
-					// invalid
-					$("#lastnamevalidation").html("Sorry, that's no valid last name")
-					$(this).removeClass("valid")
-					$(this).addClass("invalid")
+				$(window).scroll(navbarHighlighter)
+				$(window).resize(navbarHighlighter) // resizing can move around content, thus recalculation happens
+				navbarHighlighter()
+				
+				
+				// NAV MENU FOR MOBILE
+				$("#menutoggle").click(function() {
+					$(this).html($(this).html() == 'MENU' ? 'X CLOSE' : 'MENU')
+					$("#navbar").toggleClass("expanded")
+				})
+				
+				
+				// TOGGLE QUOTES FOR TEAMMEMBERS
+				var teammembers = document.getElementsByClassName("teammember")
+				for (var i = 0; i < teammembers.length; i++) {
+					teammembers[i].onclick = function() {
+						if (this.className.indexOf("flipped") === -1) {
+							this.className += " flipped"
+						} else {
+							this.className = this.className.replace("flipped", "")
+						}
+					}
 				}
-			})
-			// Email validation - TODO: Adjust based on backend
-			$("#email").change(function() {
-				if (/[^@]+@[^@]+\.[^@]/.test($(this).val())) {
-					// valid
-					$("#emailvalidation").html("")
-					$(this).removeClass("invalid")
-					$(this).addClass("valid")
-				} else {
-					// invalid
-					$("#emailvalidation").html("Sorry, that's no valid E-Mail address")
-					$(this).removeClass("valid")
-					$(this).addClass("invalid")
+				
+				
+				// TEAM SLIDER FOR MOBILE
+				var sliderEnabled = false
+				var maxWidthForSlider = 800
+				function toggleSlick(){
+					var $windowWidth = $(window).width()
+					if ($windowWidth <= maxWidthForSlider && !sliderEnabled) {
+						sliderEnabled = true
+						$('.memberlist').slick(
+							{
+								dots: true,
+								variableWidth: true,
+								swipe: false,
+								centerMode: true,
+								initialSlide: 2,
+							}
+						)
+					} else if ($windowWidth > maxWidthForSlider && sliderEnabled) {
+						sliderEnabled = false
+						$('.memberlist').slick("unslick")
+					}
 				}
+				$(document).ready(toggleSlick)
+				$(window).resize(toggleSlick)
+				
+				
+				// GALLERY
+				var galleryoverlay = document.getElementsByClassName("galleryoverlay")[0]
+				var display = document.getElementsByClassName("display")[0]
+				var imagedescription = document.getElementsByClassName("imagedescription")[0]
+				var currentimage
+				// closing overlay
+				var hidedoverlay = document.getElementsByClassName("hidedoverlay")[0]
+				hidedoverlay.onclick = function() {
+					galleryoverlay.className = galleryoverlay.className.replace("expanded", "")
+				}
+				// previous image button
+				var previousimage = document.getElementsByClassName("previousimage")[0]
+				previousimage.onclick = function() {
+					currentimage --
+					if (currentimage === -1)
+						currentimage = thumbs.length-1
+					display.src = $(thumbs[currentimage]).data("imagepath")
+					imagedescription.innerHTML = $(thumbs[currentimage]).data("imagetext")
+				}
+				// next image button
+				var nextimage = document.getElementsByClassName("nextimage")[0]
+				nextimage.onclick = function() {
+					currentimage ++
+					if (currentimage === thumbs.length)
+						currentimage = 0
+					display.src = $(thumbs[currentimage]).data("imagepath")
+					imagedescription.innerHTML = $(thumbs[currentimage]).data("imagetext")
+				}
+				// clicking on thumbnails
+				var thumbs = document.getElementsByClassName("thumbnail")
+				for (var i = 0; i < thumbs.length; i++) {
+					thumbs[i].onclick = (function(i) {
+						return function() {
+							currentimage = i
+							display.src = $(this).data("imagepath")
+							imagedescription.innerHTML = $(this).data("imagetext")
+							galleryoverlay.className += " expanded"
+						}
+					})(i)
+				}
+				
+				
+				// VERIFY CONTACT INFO
+				// First name validation
+				$("#firstname").change(function() {
+					if (/^[a-zA-Z-'´ \xc0-\xd6\xd8-\xf6\xf8-\xff]+$/.test($(this).val())) {
+						// valid
+						$("#firstnamevalidation").html("")
+						$(this).removeClass("invalid")
+						$(this).addClass("valid")
+					} else {
+						// invalid
+						$("#firstnamevalidation").html("Sorry, that's no valid first name")
+						$(this).removeClass("valid")
+						$(this).addClass("invalid")
+					}
+				})
+				// Last name validation
+				$("#lastname").change(function() {
+					if (/^[a-zA-Z-'´ \xc0-\xd6\xd8-\xf6\xf8-\xff]+$/.test($(this).val())) {
+						// valid
+						$("#lastnamevalidation").html("")
+						$(this).removeClass("invalid")
+						$(this).addClass("valid")
+					} else {
+						// invalid
+						$("#lastnamevalidation").html("Sorry, that's no valid last name")
+						$(this).removeClass("valid")
+						$(this).addClass("invalid")
+					}
+				})
+				// Email validation - TODO: Adjust based on backend
+				$("#email").change(function() {
+					if (/[^@]+@[^@]+\.[^@]/.test($(this).val())) {
+						// valid
+						$("#emailvalidation").html("")
+						$(this).removeClass("invalid")
+						$(this).addClass("valid")
+					} else {
+						// invalid
+						$("#emailvalidation").html("Sorry, that's no valid E-Mail address")
+						$(this).removeClass("valid")
+						$(this).addClass("invalid")
+					}
+				})
 			})
-		})
-	</script>
+		</script>
+	</body>
 </html>
 
 
@@ -474,7 +479,7 @@ Should multiple quotes be visible at the same time or is only one quote meant to
 
 Should "swipe" for slideshow be true or false? (considering leftclick is used to flip cards)
 
-Should gallery work on mobile? If yes/no, how should it look like? Should it be swipe-able?
+Should gallery work on mobile? If yes/no, how should it look like? Should it be position: fixed;, or should it be moved to the middle of the window once via JS? Should it be swipe-able? How should users be able to close the overlay? There could be many options, which are wanted?
 
 How should teammember divs behave when only 4 would fit into the first row? Should it be 4, then 1, or still 3, then 2? And what if all 5 fit into one row?
 
@@ -483,7 +488,7 @@ Should navmenu on mobile really not be fixed?
 
 Optional:
 Preload gallery images
-Max width for teammembers: 3 & 2 portraits instead of 4 & 1
+Max width for teammember container: 3 & 2 portraits instead of 4 & 1
 Replace carousel icons
 Clean up/improve JS
 Clean up/improve CSS
