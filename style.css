@@ -217,8 +217,7 @@
 		overflow: hidden;
 	}
 	.smoothcorners.overflow {
-		/* This is so yellow icons are still visible; overflow: hidden; is only needed for places with gradient backgrounds for MS
-		This should probably go somewhere else. It's ugly here, somehow chaotic.*/
+		/* This is so yellow icons are still visible; overflow: hidden; is only needed for places with gradient backgrounds for MS */
 		overflow: visible;
 	}
 	button.smoothcorners {
@@ -242,6 +241,8 @@
 		margin: 1ex;
 		
 		position: relative;
+	}
+	html:not(.ie9or10) .flipcontainer {
 		perspective: 1600px;
 	}
 	
@@ -249,12 +250,14 @@
 		width: 350px;
 		height: 200px;
 		position: absolute;
-		transform-style: preserve-3d;
-		transition: transform 1s;
 		
 		cursor: pointer;
 	}
-	.teammember * {
+	html:not(.ie9or10) .teammember {
+		transform-style: preserve-3d;
+		transition: transform 1s;
+	}
+	html:not(.ie9or10) .teammember * {
 		        backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		    -ms-backface-visibility: hidden;
@@ -269,31 +272,42 @@
 		height: 200px;
 	}
 	.front {
-		        transform: rotateY( 0deg );
-		-webkit-transform: rotateY( 0deg );
-		    -ms-transform: rotateY( 0deg );
-		   -moz-transform: rotateY( 0deg );
-		     -o-transform: rotateY( 0deg );
-		
 		background: -moz-linear-gradient(left, rgba(255,255,255,0) 50%, rgba(255,255,255,0.1) 100%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(to right, rgba(255,255,255,0) 50%,rgba(255,255,255,0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 	}
-	.back {
+	html:not(.ie9or10) .front {
+		        transform: rotateY( 0deg );
+		-webkit-transform: rotateY( 0deg );
+		    -ms-transform: rotateY( 0deg );
+		   -moz-transform: rotateY( 0deg );
+		     -o-transform: rotateY( 0deg );
+	}
+	html:not(.ie9or10) .back {
 		        transform: rotateY( 180deg );
 		-webkit-transform: rotateY( 180deg );
 		    -ms-transform: rotateY( 180deg );
 		   -moz-transform: rotateY( 180deg );
 		     -o-transform: rotateY( 180deg );
 	}
-	.flipped {
+	html:not(.ie9or10) .flipped {
 		        transform: rotateY( 180deg );
 		-webkit-transform: rotateY( 180deg );
 		    -ms-transform: rotateY( 180deg );
 		   -moz-transform: rotateY( 180deg );
 		     -o-transform: rotateY( 180deg );
 	}
+	.ie9or10 .back {
+		display: none;
+	}
+	.ie9or10 .flipped .front {
+		display: none;
+	}
+	.ie9or10 .flipped .back {
+		display: block;
+	}
+	
 	/* teammember bio (frontside) */
 	.shortbio {
 		width: 150px;
