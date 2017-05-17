@@ -27,7 +27,10 @@
 	
 	body { margin: 0; padding: 0; font-size: 16px; font-family: "Merriweather-Light"; }
 	
-	img { vertical-align: middle; }
+	img {
+		vertical-align: middle;
+		border: 0;
+	}
 	
 	h1 {
 		padding: 4ex 0 2ex;
