@@ -385,8 +385,8 @@
 				currentimage --
 				if (currentimage === -1)
 					currentimage = thumbs.length-1
-				display.src = thumbs[currentimage].dataset.imagepath
-				imagedescription.innerHTML = thumbs[currentimage].dataset.imagetext
+				display.src = $(thumbs[currentimage]).data("imagepath")
+				imagedescription.innerHTML = $(thumbs[currentimage]).data("imagetext")
 			}
 			// next image button
 			var nextimage = document.getElementsByClassName("nextimage")[0]
@@ -394,19 +394,20 @@
 				currentimage ++
 				if (currentimage === thumbs.length)
 					currentimage = 0
-				display.src = thumbs[currentimage].dataset.imagepath
-				imagedescription.innerHTML = thumbs[currentimage].dataset.imagetext
+				display.src = $(thumbs[currentimage]).data("imagepath")
+				imagedescription.innerHTML = $(thumbs[currentimage]).data("imagetext")
 			}
 			// clicking on thumbnails
 			var thumbs = document.getElementsByClassName("thumbnail")
 			for (var i = 0; i < thumbs.length; i++) {
-				thumbs[i].dataset.imagenumber = i
-				thumbs[i].onclick = function() {
-					currentimage = this.dataset.imagenumber
-					display.src = this.dataset.imagepath
-					imagedescription.innerHTML = this.dataset.imagetext
-					galleryoverlay.className += " expanded"
-				}
+				thumbs[i].onclick = (function(i) {
+					return function() {
+						currentimage = i
+						display.src = $(this).data("imagepath")
+						imagedescription.innerHTML = $(this).data("imagetext")
+						galleryoverlay.className += " expanded"
+					}
+				})(i)
 			}
 			
 			
