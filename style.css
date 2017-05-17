@@ -51,10 +51,10 @@
 		border: #ddd solid 2px;
 		
 		background-color: #eeeeee; /* Old browsers */
-		background-color: -moz-linear-gradient(top, #ddd 0%, #fff 100%); /* FF3.6-15 */
-		background-color: -webkit-linear-gradient(top, #ddd 0%,#fff 100%); /* Chrome10-25,Safari5.1-6 */
-		background-color: linear-gradient(to bottom, #ddd 0%,#fff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ddd', endColorstr='#fff',GradientType=0 ); /* IE6-9 */
+		background-color: -moz-linear-gradient(top, #dddddd 0%, #ffffff 100%); /* FF3.6-15 */
+		background-color: -webkit-linear-gradient(top, #dddddd 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+		background-color: linear-gradient(to bottom, #dddddd 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 	}
 	input {
 		height: 5ex;
