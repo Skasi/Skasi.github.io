@@ -35,8 +35,8 @@
 				
 				<h1>Hey there, we are<br>Spacecowboy<br>
 				<small>- An independent space agency -</small></h1>
-			
-				<a href="#about" class="yellowbutton smoothcorners">Learn more</a>
+				
+				<button id="learnmore" class="smoothcorners"><span class="yellowbutton">Learn more</span></button>
 			</div>
 
 			<div id="about">
@@ -338,6 +338,14 @@
 				$("#menutoggle").click(function() {
 					$(this).html($(this).html() == 'MENU' ? 'X CLOSE' : 'MENU')
 					$("#navbar").toggleClass("expanded")
+				})
+				
+				
+				// LEARN MORE BUTTON
+				$("#learnmore").click(function() {
+					document.querySelector("#learnmore").scrollIntoView({ 
+						behavior: "smooth"
+					})
 				})
 				
 				
