@@ -25,7 +25,12 @@
 		font-family: "Monsterrat";
 	}
 	
-	body { margin: 0; padding: 0; font-size: 16px; font-family: "Merriweather-Light"; }
+	body {
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+		font-family: "Merriweather-Light";
+	}
 	
 	img {
 		vertical-align: middle;
