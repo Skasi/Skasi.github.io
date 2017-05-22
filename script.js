@@ -1,6 +1,6 @@
-// classes for IE 9&10 specific CSS
-if (navigator.userAgent.indexOf("MSIE 10") != -1 || navigator.userAgent.indexOf("MSIE 9") != -1) {
-	$("html").addClass("ie9or10")
+// class for IE 10 specific CSS (IE 9 and below rely on IE's conditional comments)
+if (navigator.userAgent.indexOf("MSIE 10") != -1) {
+	$("html").addClass("ie10or9orbelow")
 }
 
 

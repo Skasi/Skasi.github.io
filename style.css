@@ -246,7 +246,7 @@
 		
 		position: relative;
 	}
-	html:not(.ie9or10) .flipcontainer {
+	html:not(.ie10or9orbelow) .flipcontainer {
 		perspective: 1600px;
 	}
 	
@@ -257,11 +257,11 @@
 		
 		cursor: pointer;
 	}
-	html:not(.ie9or10) .teammember {
+	html:not(.ie10or9orbelow) .teammember {
 		transform-style: preserve-3d;
 		transition: transform 1s;
 	}
-	html:not(.ie9or10) .teammember * {
+	html:not(.ie10or9orbelow) .teammember * {
 		        backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		    -ms-backface-visibility: hidden;
@@ -280,34 +280,34 @@
 		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 50%,rgba(255,255,255,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(to right, rgba(255,255,255,0) 50%,rgba(255,255,255,0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	}
-	html:not(.ie9or10) .front {
+	html:not(.ie10or9orbelow) .front {
 		        transform: rotateY( 0deg );
 		-webkit-transform: rotateY( 0deg );
 		    -ms-transform: rotateY( 0deg );
 		   -moz-transform: rotateY( 0deg );
 		     -o-transform: rotateY( 0deg );
 	}
-	html:not(.ie9or10) .back {
+	html:not(.ie10or9orbelow) .back {
 		        transform: rotateY( 180deg );
 		-webkit-transform: rotateY( 180deg );
 		    -ms-transform: rotateY( 180deg );
 		   -moz-transform: rotateY( 180deg );
 		     -o-transform: rotateY( 180deg );
 	}
-	html:not(.ie9or10) .flipped {
+	html:not(.ie10or9orbelow) .flipped {
 		        transform: rotateY( 180deg );
 		-webkit-transform: rotateY( 180deg );
 		    -ms-transform: rotateY( 180deg );
 		   -moz-transform: rotateY( 180deg );
 		     -o-transform: rotateY( 180deg );
 	}
-	.ie9or10 .back {
+	.ie10or9orbelow .back {
 		display: none;
 	}
-	.ie9or10 .flipped .front {
+	.ie10or9orbelow .flipped .front {
 		display: none;
 	}
-	.ie9or10 .flipped .back {
+	.ie10or9orbelow .flipped .back {
 		display: block;
 	}
 	
